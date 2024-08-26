@@ -1,9 +1,8 @@
-const types={
-    media:["mp4","mkv"],
-    archives:["zip","7z",'rar','tar','iso'],
-    documents:['docx','doc','pdf','xlsx','txt'],
-    app:['exe','dmg','pkg'],
-    picture:['png','jpg']
+exports.types = {
+    media : ["mp4", "mkv", "png", "jpg"],
+    archives : ["zip", "7z", "rar", "tar", "gz", "ar", "iso", "xz"],
+    documents : ["doc", "pdf", "xls", "xlsx", "docx", "text"],
+    app:['exe','dmg','pkg']
 }
 
-module.export = { types }
+// module.export = { types }

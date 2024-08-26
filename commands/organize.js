@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const types = require("../utility/utility.js");
+const types = require("../utility/utility");
 
 exports.organizeFunction = function (directoryPath){
     //console.log("organize executed");
@@ -38,10 +38,14 @@ function helper(src, dest){
 
 function getCategory(file){
     let ext = path.extname(file).slice(1);
-    // console.log(ext);
-    for(let type in types){
-        let extType = types[type];
+    const typeObj = types.types;
+    // console.log(typeObj);
+    for(let type in typeObj){
+        // console.log(type);
+        let extType = typeObj[type];
+        // console.log(extType);
         for(let e = 0; e < extType.length; e++){
+            // console.log(extType[e]);
             if(extType[e] == ext){
                 return type;
             }

@@ -11,7 +11,7 @@
   "license": "ISC",
   
 "bin":{
-    "thor" : "main.js"
+    "fso" : "main.js"
   }
   
 }
